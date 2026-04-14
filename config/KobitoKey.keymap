@@ -33,15 +33,31 @@
         };
     };
 
+    macros {
+        new_macro1: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp LS(C) &kp LS(Q) &kp LS(H) &kp C &kp F &kp M &kp N7 &kp ENTER>;
+            label = "NEW_MACRO";
+        };
+
+        new_macro2: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Z) &kp N9 &kp POUND &kp V &kp Z &kp RPAR &kp LS(K) &kp LS(J) &kp ENTER>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E           &kp R        &kp T        &kp Y     &kp U        &kp I        &kp O      &lt 3 P
-&kp A             &kp S             &kp D           &kp F        &kp G        &kp H     &kp J        &kp K        &kp L      &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C           &kp V        &kp B        &kp N     &kp M        &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
-&kp ESCAPE        &kp LEFT_CONTROL  &mt LCMD LANG2  &lt 1 SPACE  &lt 2 SPACE  &kp BSPC  &lt 5 ENTER  &lt 4 LANG1  &kp RSHFT  &lt 3 SLASH
+&kp Q             &kp W             &kp E           &kp R        &kp T            &kp Y     &kp U        &kp I        &kp O      &lt 3 P
+&kp A             &kp S             &kp D           &kp F        &kp G            &kp H     &kp J        &kp K        &kp L      &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C           &kp V        &kp B            &kp N     &kp M        &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
+&kp ESCAPE        &kp LEFT_CONTROL  &mt LCMD LANG2  &lt 1 SPACE  &lt 2 BACKSPACE  &kp BSPC  &lt 5 ENTER  &lt 4 LANG1  &kp RSHFT  &lt 3 SLASH
             >;
         };
 
@@ -77,10 +93,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LEFT)    &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)  &kp C_VOLUME_UP
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW      &kp C_VOLUME_DOWN
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans               &trans
+&new_macro1  &new_macro2  &trans  &trans  &trans  &trans  &kp LC(LEFT)    &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)  &kp C_VOLUME_UP
+&trans       &trans       &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW      &kp C_VOLUME_DOWN
+&trans       &trans       &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
+&trans       &trans       &trans  &trans  &trans  &trans  &trans          &trans            &trans               &trans
             >;
         };
 
