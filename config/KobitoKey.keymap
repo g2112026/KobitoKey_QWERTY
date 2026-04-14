@@ -77,10 +77,10 @@
 
         layer_4 {
             bindings = <
-&new_macro1  &new_macro2  &trans  &trans  &trans  &trans  &kp LC(LEFT)    &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)  &kp C_VOLUME_UP
-&trans       &trans       &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW      &kp C_VOLUME_DOWN
-&trans       &trans       &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
-&trans       &trans       &trans  &trans  &trans  &trans  &trans          &trans            &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LEFT)    &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)  &kp C_VOLUME_UP
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW      &kp C_VOLUME_DOWN
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans               &trans
             >;
         };
 
