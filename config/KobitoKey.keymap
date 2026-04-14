@@ -33,22 +33,6 @@
         };
     };
 
-    macros {
-        new_macro1: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp LS(C) &kp LS(Q) &kp LS(H) &kp C &kp F &kp M &kp N7 &kp ENTER>;
-            label = "NEW_MACRO";
-        };
-
-        new_macro2: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(Z) &kp N9 &kp POUND &kp V &kp Z &kp RPAR &kp LS(K) &kp LS(J) &kp ENTER>;
-            label = "NEW_MACRO";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
